@@ -21,6 +21,8 @@ group :test do
   gem 'rack-test'
   gem 'rspec'
   gem 'capybara'
+  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :test, :development do

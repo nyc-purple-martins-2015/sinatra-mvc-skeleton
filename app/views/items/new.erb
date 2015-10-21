@@ -1,0 +1,8 @@
+
+<form method="post" action="/items">
+  <% @item.errors.full_messages.each do |error| %>
+  <h3><%= error %></h3>
+  <% end %>
+  <input type="text" name="item[name]" value="<%= @item.name %>" placeholder="Item Name" />
+  <input type="submit" value="ZOMG"/>
+</form>
