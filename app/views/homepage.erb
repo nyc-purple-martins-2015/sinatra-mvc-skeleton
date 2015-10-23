@@ -1,0 +1,29 @@
+<div>
+hello           world
+
+
+how    are   you
+
+</div>
+
+<% if @current_user %>
+  <h1>Welcome back <%= @current_user.email %></h1>
+
+  <div>
+    <a href="/logout">Logout</a>
+  </div>
+
+
+<% else %>
+  <div>
+    <a href="/signup">Sign up</a>
+    <a href="/login">Login</a>
+  </div>
+<% end %>
+
+
+<textarea>
+  <%= @my_data[:cookies] %>
+
+  <%= @my_data[:session] %>
+</textarea>
