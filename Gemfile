@@ -10,6 +10,8 @@ gem 'sinatra-contrib'
 gem 'activesupport'
 gem 'activerecord'
 gem 'bcrypt-ruby'
+gem 'faker'
+gem 'pry'
 
 gem 'rake'
 
