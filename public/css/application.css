@@ -65,3 +65,7 @@ code {
     margin-left: -1em;
     overflow: auto;
 }
+
+.items-list {
+    display: none;
+}

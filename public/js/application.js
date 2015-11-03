@@ -1,7 +1,29 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $(".category-link").on("click", function(event) {
+    event.preventDefault();
+    // debugger
+
+    // $(this).parents(".category").children(".items-list").toggle();
+    $(this).parent().next().toggle()
+
+  })
+
+  // $(document).on('click', "a.category-link", function(event) {
+  //   event.preventDefault();
+  //       // var link = $(this);
+  //       var request = $.ajax({
+  //         method:'get',
+  //         url: $(event.target).attr("href"),
+  //       })
+  //       request.done(function(data) {
+  //         if ( $(".item-list").length) {
+  //           $(".item-list").toggle();
+  //         } else {
+  //           $(data).insertAfter(link);
+  //         }
+  //       });
+  //     }
+  // });
+
 });

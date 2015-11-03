@@ -1,0 +1,12 @@
+<form method="post" action="/items">
+  <p>Select a Category </p>
+    <%categories.each do |category|%>
+      <input type="radio" name="item[category_id]" value="<%=category.id%>" /><%=category.title%>
+    <%end%>
+
+  <p>Title for Item: </p><input type="text" name="item[title]" placeholder="Item Title" />
+  <p>Item Description: </p><textarea name="item[description]" placeholder="Item Description" rows="8" columns="8"></textarea>
+  <p>Item Price: $</p><input type="text" name="item[price]" placeholder="Item Price" />
+  <input type="hidden" name="item[user_id]" value="<%=current_user.id%>" />
+  <input type="submit" value="Post Item" />
+</form>

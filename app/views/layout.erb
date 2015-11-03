@@ -18,6 +18,16 @@
   <title></title>
 </head>
 <body>
+  <header class="header">
+    <h2><a href="/">Frogslist</a></h2>
+    <%if logged_in?%>
+      <p><a href="/user/<%=current_user.id%>"><%=current_user.name%></a></p>
+      <p><a href="/items/new">Post a New Item</a></p>
+      <p><a href="/logout">Sign Out</a></p>
+    <%else%>
+      <p><a href="/login">Log-in or Sign-up</a></p>
+    <%end%>
+  </header>
 <div id="content">
   <%= yield %>
 </div>

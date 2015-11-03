@@ -1,0 +1,17 @@
+<h2>Categories</h2>
+<ul>
+<%categories.each do |category|%>
+<!-- <div class="category"> -->
+  <li><a class="category-link" href="categories/<%=category.id%>"><%=category.title%></a></li>
+  <div class="items-list">
+    <ul>
+      <% category.items.each do |item| %>
+        <li><%= item.title %></li>
+      <% end %>
+    </ul>
+  </div>
+<!-- </div> -->
+<%end%>
+</ul>
+
+
